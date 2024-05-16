@@ -1,0 +1,27 @@
+// ================== BREAKPOINTS ==================
+    // Mobile
+    $breakpoint-mobile-maxw: 767px;
+    // Tablet
+        $breakpoint-tablet-minw: 768px;
+        $breakpoint-tablet-maxw: 1311px;
+    // Desktop
+        $breakpoint-desktop-minw: 1312px;
+// ================== /BREAKPOINTS ==================
+
+// ================== FONT-FAMILY ==================
+    $primary-font-family: 'Roboto', sans-serif;
+// ================== /FONT-FAMILY ==================
+
+// ================== COLORS ==================
+    $primary-color: #101828;
+    $active-color: #E44848;
+    $hover-color: #D84343;
+    $secondary-color: #475467;
+    $rating-color: #FFC531;
+    $inputs-color: #F7F7F7;
+    $equipment-color: #F2F4F7;
+// ================== /COLORS ==================
+
+// ================== TIMING ==================
+    $timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+// ================== /TIMING ==================
