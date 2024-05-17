@@ -1,0 +1,37 @@
+@use 'styles/variables';
+
+.header {
+    display: flex;
+
+    width: 1312px;
+    height: 60px;
+
+    padding: 24px 24px 0 24px;
+
+    border-bottom: solid 1px variables.$active-color;
+}
+
+.navigation {
+    margin-left: auto;
+
+    &-list {
+        display: flex;
+        align-items: center;
+
+        height: 60px;
+    }
+
+    &-item:not(:first-child) {
+        margin-left: 24px;
+    }
+
+    &-link {
+        font-size: 32px;
+        font-weight: 500;
+        color: variables.$primary-color;
+    }
+}
+
+.active {
+    border-bottom: solid 1px variables.$active-color;
+}

@@ -1,5 +1,7 @@
 const Catalog = () => {
-    return;
+    return (
+        <div>Catalog</div>
+    );
 };
 
 export default Catalog;
