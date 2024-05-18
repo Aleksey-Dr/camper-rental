@@ -1,0 +1,49 @@
+@use 'styles/variables';
+
+.filter {
+    margin-top: 32px;
+
+    &-title {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.5;
+        color: rgba(16, 24, 40, 0.6);
+    }
+
+    &-subtitle {
+        padding-bottom: 24px;
+
+        border-bottom: solid 1px rgba(16, 24, 40, 0.1);
+        
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    &-equipment {
+        margin-top: 14px;
+    }
+
+    &-type {
+        margin-top: 32px;
+        margin-bottom: 64px;
+    }
+
+    &-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px 10px;
+    
+        margin-top: 24px;
+
+        &-transparent {
+             display: flex;
+            flex-wrap: wrap;
+            gap: 8px 10px;
+        
+            margin-top: 24px;
+
+            fill: transparent;
+            stroke: variables.$primary-color;
+        }
+    }
+}

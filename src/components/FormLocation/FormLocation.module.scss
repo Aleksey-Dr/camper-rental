@@ -1,0 +1,52 @@
+@use 'styles/variables';
+
+.form {
+    display: flex;
+    flex-direction: column;
+
+    color: rgba(16, 24, 40, 0.6);
+
+    &-label {
+        font-weight: 500;
+        line-height: 1.5;
+    }
+
+    &-input {
+        box-sizing: border-box;
+        width: 360px;
+        height: 56px;
+
+        padding: 18px;
+        padding-left: 44px;
+        margin-top: 8px;
+
+        background-color: variables.$inputs-color;
+
+        border: none;
+        border-radius: 8px;
+        outline: transparent;
+
+        &:focus {
+            border: solid 1px variables.$active-color;
+        }
+
+        &-wrapper {
+            position: relative;
+        }
+
+        &::placeholder {
+            font-size: 16px;
+            line-height: 1.25;
+            color: variables.$primary-color;
+        }
+    }
+
+    &-icon {
+        position: absolute;
+        top: 40%;
+        right: 90%;
+
+        fill: #ffffff;
+        stroke: variables.$primary-color;
+    }
+}

@@ -1,0 +1,53 @@
+@use 'styles/variables';
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.item {
+    &-checkbox {
+        margin: 0;
+
+        border: none;
+    }
+
+    &-label {
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    
+        width: 112px;
+        height: 95px;
+    
+        border: solid 1px rgba(16, 24, 40, 0.2);
+        border-radius: 8px;
+    }
+
+    &-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    
+        text-align: center;
+    }
+
+    &-icon {
+        stroke: variables.$primary-color;
+    }
+}
+
+.item-checkbox:checked + .item-label {
+    border: solid 1px variables.$active-color;;
+}
