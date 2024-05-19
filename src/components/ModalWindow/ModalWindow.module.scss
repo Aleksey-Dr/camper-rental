@@ -51,7 +51,7 @@
             overflow-x: hidden;
 
             scrollbar-width: thin;
-            scrollbar-color: #D9D9D9 transparent;
+            scrollbar-color: variables.$scroll-color transparent;
         }
     }
 
@@ -134,15 +134,15 @@
         &-star {
             margin-right: 4px;
         
-            fill: #FFC531;
-            stroke: #FFC531;
+            fill: variables.$rating-color;
+            stroke: variables.$rating-color;
         }
 
         &-location {
             margin-left: 16px;
             margin-right: 4px;
 
-            fill: #ffffff;
+            fill: transparent;
             stroke: variables.$primary-color;
         }
     }
@@ -181,7 +181,7 @@
         overflow: hidden;
 
         line-height: 1.5;
-        color: #475467;
+        color: variables.$secondary-color;
     }
 }
 

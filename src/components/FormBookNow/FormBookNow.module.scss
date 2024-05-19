@@ -1,3 +1,5 @@
+@use 'styles/variables';
+
 .form {
     display: flex;
     flex-direction: column;
@@ -16,7 +18,7 @@
         margin-bottom: 24px;
 
         line-height: 1.5;
-        color: #475467;
+        color: variables.$secondary-color;
     }
 
     &-wrapper {
@@ -47,7 +49,7 @@
         border: none;
         border-radius: 10px;
          
-        background-color: #F7F7F7;
+        background-color: variables.$inputs-color;
 
         &:focus {
             + .form-label {
@@ -84,7 +86,7 @@
 
         outline: transparent;
 
-        background-color: #F7F7F7;
+        background-color: variables.$inputs-color;
 
         &:focus {
             + .form-label {
@@ -126,12 +128,20 @@
         border: none;
         border-radius: 200px;
         
-        background-color: #E44848;
+        background-color: variables.$active-color;
+
+        cursor: pointer;
 
         font-weight: 500;
         font-size: 16px;
         line-height: 1.5;
         letter-spacing: -0.01em;
         color: #ffffff;
+
+        &:hover {
+            background-color: variables.$hover-color;
+    
+            transition: background-color 250ms variables.$timing-function;
+        }
     }
 }

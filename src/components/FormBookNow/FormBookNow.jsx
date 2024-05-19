@@ -1,3 +1,5 @@
+import Calendar from 'components/Calendar';
+
 import css from './FormBookNow.module.scss';
 
 const FormBookNow = () => {
@@ -32,16 +34,9 @@ const FormBookNow = () => {
                 </label>
             </div>
             <div className={css['form-wrapper']}>
-                <input
-                    type='text'
-                    id='date'
-                    placeholder=' '
-                    required
-                    className={css['form-input']}
+                <Calendar
+                    placeholder="Booking date"
                 />
-                <label htmlFor='date' className={css['form-label']}>
-                    Booking date
-                </label>
             </div>
             <div className={css['form-wrapper-textarea']}>
                 <textarea
