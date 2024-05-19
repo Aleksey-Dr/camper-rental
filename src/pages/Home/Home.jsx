@@ -32,7 +32,7 @@ const Home = () => {
                 <Link to='/catalog'
                     className={css['home-link']}
                 >
-                    Let&#10076;s Travel!
+                    Let&#10076;s Travel !
                 </Link>
             </div>
         </div>

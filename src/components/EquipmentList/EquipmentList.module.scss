@@ -24,4 +24,9 @@
         fill: transparent;
         stroke: variables.$primary-color;
     }
+
+    &-details {
+        display: flex;
+        gap: 8px;
+    }
 }

@@ -17,7 +17,7 @@ const CamperCard = ({
     details,
     id
 }) => {
-    const equipment = Object.keys(details);
+    const equipment = Object.entries(details);
 
     const [currentFirstElement, setCurrentFirst] = useState(0);
     const [currentEndElement, setCurrentEndElement] = useState(6);

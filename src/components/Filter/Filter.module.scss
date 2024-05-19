@@ -46,4 +46,29 @@
             stroke: variables.$primary-color;
         }
     }
+    
+    &-btn {
+        width: 173px;
+        height: 56px;
+    
+        padding: 16px 44px;
+        background-color: variables.$active-color;
+        border: none;
+        border-radius: 28px;
+
+        cursor: pointer;
+    
+        font-family: variables.$primary-font-family;
+        font-weight: 500;
+        font-size: 16px;
+        color: #ffffff;
+    
+        transition: background-color 250ms variables.$timing-function;
+    
+        &:hover {
+            background-color: variables.$hover-color;
+    
+            transition: background-color 250ms variables.$timing-function;
+        } 
+    }
 }

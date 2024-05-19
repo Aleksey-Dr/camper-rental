@@ -1,26 +1,31 @@
 [
     {
         "id": 1,
+        "value": "airConditioner",
         "href": "#icon-wind",
         "description": "AC"
     },
     {
         "id": 2,
+        "value": "automatic",
         "href": "#icon-automatic",
         "description": "Automatic"
     },
     {
         "id": 3,
+        "value": "kitchen",
         "href": "#icon-kitchen",
         "description": "Kitchen"
     },
     {
         "id": 4,
+        "value": "TV",
         "href": "#icon-TV",
         "description": "TV"
     },
     {
         "id": 5,
+        "value": "shower",
         "href": "#icon-shower",
         "description": "Shower/WC"
     }  
