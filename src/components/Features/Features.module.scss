@@ -1,0 +1,67 @@
+.features {
+    box-sizing: border-box;
+    display: flex;
+    gap: 24px;
+    
+    &-equipment {
+        height: 200px;
+
+        overflow: auto;
+        overflow-x: hidden;
+
+        scrollbar-width: thin;
+        scrollbar-color: #D9D9D9 transparent;
+    }
+
+    &-information {
+        box-sizing: border-box;
+        width: 424px;
+        height: 500px;
+
+        margin-top: 44px;
+    }
+
+    &-details {
+        margin-top: 44px;
+
+        &-title {
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 1.2;
+        }
+
+        &-list {
+            margin-top: 48px;
+        }
+
+        &-item {
+            display: flex;
+
+            width: 430px;
+
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 1.33;
+
+            &:not(first-child) {
+                margin-top: 14px;
+            }
+        }
+
+        &-value {
+            margin-left: auto;
+        }
+    }
+
+    &-form {
+        box-sizing: border-box;
+        width: 438px;
+        height: 530px;
+
+        padding: 24px;
+        margin-top: 44px;
+
+        border: 1px solid rgba(16, 24, 40, 0.2);
+        border-radius: 10px;
+    }
+}

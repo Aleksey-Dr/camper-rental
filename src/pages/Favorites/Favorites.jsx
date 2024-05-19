@@ -1,6 +1,12 @@
+import SideBar from 'components/SideBar';
+
+import css from './Favorites.module.scss';
+
 const Favorites = () => {
     return (
-        <div>Favorites</div>
+        <div className={css.wrapper}>
+            <SideBar />
+        </div>
     );
 };
 

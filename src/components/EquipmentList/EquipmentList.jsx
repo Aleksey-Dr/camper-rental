@@ -8,7 +8,7 @@ const EquipmentList = ({ items }) => {
             {items.map(
                 item =>
                     item[1] !== 0 && (
-                        <li key={item[0]} className={css['list-item']}>
+                        <li key={item} className={css['list-item']}>
                             <svg
                                 width="20"
                                 height="20"
