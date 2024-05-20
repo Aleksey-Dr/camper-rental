@@ -60,7 +60,7 @@ const CamperCard = ({ camperId }) => {
                     <div className={css['card-header']}>
                         <h2 className={css['card-title']}>{name}</h2>
                         <span className={css['card-price']}>
-                            &#8364;{price}
+                            &#8364;{price},00
                         </span>
                         <button
                             onClick={addToFavorites}

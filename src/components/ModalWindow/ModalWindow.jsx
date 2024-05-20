@@ -75,7 +75,7 @@ const ModalWindow = ({ camperId, onClose }) => {
                     </svg>
                     Kyiv, Ukraine
                 </span>
-                <span className={css['card-price']}>&#8364;{price}</span>
+                <span className={css['card-price']}>&#8364;{price},00</span>
                 <div className={css['modal-window-scroll']}>
                     <ul className={css['card-gallery']}>
                         <li>
