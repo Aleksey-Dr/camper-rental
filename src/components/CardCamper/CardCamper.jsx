@@ -31,9 +31,7 @@ const CamperCard = ({ camperId }) => {
     const [currentFirstElement, setCurrentFirst] = useState(0);
     const [currentEndElement, setCurrentEndElement] = useState(6);
 
-    const toggleOpen = () => {
-        setIsOpen(!isOpen)
-    }
+    const toggleOpen = () => setIsOpen(!isOpen);
 
     const toggleLeft = () => {
         if (currentEndElement <= equipment.length) {

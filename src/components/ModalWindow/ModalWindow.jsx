@@ -1,8 +1,8 @@
-import { NavLink } from 'react-router-dom';
+import { useState } from 'react';
 import { useSelector } from 'react-redux';
 
 import Features from 'components/Features';
-// import Reviews from 'components/Reviews';
+import Reviews from 'components/Reviews';
 
 import { selectCampers } from '../../redux/selectors';
 
@@ -11,6 +11,9 @@ import icons from 'images/icons.svg';
 import css from './ModalWindow.module.scss';
 
 const ModalWindow = ({ camperId, onClose }) => {
+    const [featurePage, setFeaturePage] = useState(true);
+    const [reviewsPage, setReviewsPage] = useState(false);
+
     const campers = useSelector(selectCampers);
     const camperInfo = campers.find(camper => camper._id === camperId);
     const {
@@ -21,6 +24,15 @@ const ModalWindow = ({ camperId, onClose }) => {
         gallery,
         description,
     } = camperInfo;
+
+    const onFeature = () => {
+        setFeaturePage(true);
+        setReviewsPage(false)
+    };
+    const onReviews = () => {
+        setFeaturePage(false);
+        setReviewsPage(true)
+    };
 
     return (
         <div
@@ -89,27 +101,38 @@ const ModalWindow = ({ camperId, onClose }) => {
                         </li>
                     </ul>
                     <p className={css['card-description']}>{description}</p>
-                    <nav className={css.navigation}>
-                        <ul className={css['navigation-list']}>
+                    <nav className={css.toggle}>
+                        <ul className={css['toggle-list']}>
                             <li>
-                                <NavLink
-                                    to={`${camperId}/features`}
-                                    className={css['navigation-link']}
+                                <button
+                                    onClick={onFeature}
+                                    type='button'
+                                    className={featurePage
+                                        ? `${css['toggle-btn']} ${css.current}`
+                                        : css['toggle-btn']
+                                    }
                                 >
                                     Features
-                                </NavLink>
+                                </button>
                             </li>
                             <li>
-                                <NavLink
-                                    to='reviews'
-                                    className={css['navigation-link']}
+                                <button
+                                    onClick={onReviews}
+                                    type='button'
+                                    className={reviewsPage
+                                        ? `${css['toggle-btn']} ${css.current}`
+                                        : css['toggle-btn']
+                                    }
                                 >
                                     Reviews
-                                </NavLink>
+                                </button>
                             </li>
                         </ul>
                     </nav>
-                    <Features camperId={camperId} />
+                    {featurePage
+                        ? <Features camperId={camperId} />
+                        : <Reviews camperId={camperId} />
+                    }
                 </div>
             </div>
         </div>

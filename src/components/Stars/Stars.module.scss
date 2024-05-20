@@ -1,0 +1,16 @@
+@use 'styles/variables';
+
+.rating {
+    display: flex;
+    gap: 4px;
+  }
+  
+  .star {
+    width: 16px;
+    height: 16px;
+  
+    &.active path {
+      fill: variables.$rating-color;
+      stroke: variables.$rating-color;
+    }
+  }

@@ -10,12 +10,15 @@ const FavoritesList = () => {
 
     return (
         <ul className={css['favorites-list']}>
-            {favorites.map(camper => (
-                <CardCamper
-                    key={camper._id}
-                    camperId={camper._id}
-                />
-            ))}
+            {favorites.length !== 0
+                ? (favorites.map(camper => (
+                    <CardCamper
+                        key={camper._id}
+                        camperId={camper._id}
+                    />
+                  )))
+                : <h2>You don't have a list of favorites yet, create that list!</h2>
+            }
         </ul>
     );
 };

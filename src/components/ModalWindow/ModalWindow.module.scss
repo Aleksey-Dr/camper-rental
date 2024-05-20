@@ -69,7 +69,7 @@
     }
 }
 
-.navigation {
+.toggle {
     width: 902px;
     height: 48px;
 
@@ -77,34 +77,30 @@
 
     border-bottom: solid 1px rgba(16, 24, 40, 0.2);
 
-    
-    .active::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: -25px;
-
-        width: 100%;
-        height: 4px;
-        flex-shrink: 0;
-
-        background-color: variables.$active-color;
-    }
 
     &-list {
         display: flex;
         gap: 40px;
-
-        font-weight: 600;
-        font-size: 20px;
-        line-height: 1.2;
-        color: variables.$primary-color;
     }
     
-    &-link {
+    &-btn {
         position: relative;
         display: block;
+        height: 48px;
+        padding-bottom: 24px;
+        border: none;
+        background-color: transparent;
+
+        cursor: pointer;
+
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 1.2;
         color: variables.$primary-color;
+        
+        &.current {
+            border-bottom: solid 4px variables.$active-color;
+        }
     }
 }
 
