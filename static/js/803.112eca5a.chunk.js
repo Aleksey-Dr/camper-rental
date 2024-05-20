@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkcamper_rental=self.webpackChunkcamper_rental||[]).push([[803],{2867:(s,e,a)=>{a.r(e),a.d(e,{default:()=>d});var r=a(5342),c=a(3003),t=a(6961),i=a(3775);const l="FavoritesList_favorites-list__i8OW1";var n=a(579);const p=()=>{const s=(0,c.d4)(i.Cp);return(0,n.jsx)("ul",{className:l,children:s.map((s=>(0,n.jsx)(t.A,{camperId:s._id},s._id)))})},_="Favorites_wrapper__Zc9q3",d=()=>(0,n.jsxs)("div",{className:_,children:[(0,n.jsx)(r.A,{}),(0,n.jsx)(p,{})]})}}]);
+//# sourceMappingURL=803.112eca5a.chunk.js.map
