@@ -1,5 +1,8 @@
-import { Link, NavLink, Outlet, useParams } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+
+import Features from 'components/Features';
+// import Reviews from 'components/Reviews';
 
 import { selectCampers } from '../../redux/selectors';
 
@@ -7,8 +10,7 @@ import icons from 'images/icons.svg';
 
 import css from './ModalWindow.module.scss';
 
-const ModalWindow = () => {
-    const { camperId } = useParams();
+const ModalWindow = ({ camperId, onClose }) => {
     const campers = useSelector(selectCampers);
     const camperInfo = campers.find(camper => camper._id === camperId);
     const {
@@ -27,8 +29,9 @@ const ModalWindow = () => {
             <div className={css['modal-window']}>
                 <div className={css['card-header']}>
                     <h2 className={css['card-title']}>{name}</h2>
-                    <Link
-                        to='/catalog'
+                    <button
+                        onClick={onClose}
+                        type='button'
                         className={css['modal-btn']}
                     >
                         <svg
@@ -38,7 +41,7 @@ const ModalWindow = () => {
                         >
                             <use href={`${icons}#icon-cross`}></use>
                         </svg>
-                    </Link>
+                    </button>
                 </div>
                 <span className={css['card-reviews']}>
                     <svg
@@ -90,7 +93,7 @@ const ModalWindow = () => {
                         <ul className={css['navigation-list']}>
                             <li>
                                 <NavLink
-                                    to='features'
+                                    to={`${camperId}/features`}
                                     className={css['navigation-link']}
                                 >
                                     Features
@@ -106,7 +109,7 @@ const ModalWindow = () => {
                             </li>
                         </ul>
                     </nav>
-                    <Outlet />
+                    <Features camperId={camperId} />
                 </div>
             </div>
         </div>

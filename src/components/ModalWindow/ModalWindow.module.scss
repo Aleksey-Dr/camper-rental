@@ -13,12 +13,6 @@
             visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
         background-color: rgba(46, 47, 66, 0.40);
-
-        &.is-hidden {
-            visibility: hidden;
-            opacity: 0;
-            pointer-events: none;
-        }
     }
 
     &-window {
@@ -39,10 +33,10 @@
 
         background-color: #fcfcfc;
 
-        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        transition: transform 250ms variables.$timing-function;
 
         &-scroll {
-            width: 902px;
+            width: 912px;
             height: 500px;
 
             margin-top: 24px;

@@ -48,14 +48,7 @@ const MainContent = () => {
                 {cardsOnPage.map(camper => (
                     <CardCamper
                         key={camper._id}
-                        img={camper.gallery[0]}
-                        title={camper.name}
-                        price={camper.price}
-                        rating={camper.rating}
-                        reviews={camper.reviews.length}
-                        description={camper.description}
-                        details={camper.details}
-                        id={camper._id}
+                        camperId={camper._id}
                     />
                 ))}
             </ul>

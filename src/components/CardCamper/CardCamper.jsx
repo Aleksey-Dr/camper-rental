@@ -1,26 +1,39 @@
 import { useState } from 'react';
 import { Outlet } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 
-import LinkButton from 'components/LinkButton';
 import EquipmentList from 'components/EquipmentList';
+import Button from 'components/Button';
+import ModalWindow from 'components/ModalWindow';
+
+import { selectCampers, selectFavoritesIds } from '../../redux/selectors';
+import { changeFavorites } from '../../redux/favoritesSlice';
 
 import icons from 'images/icons.svg';
 import css from './CardCamper.module.scss';
 
-const CamperCard = ({
-    img,
-    title,
-    price,
-    rating,
-    reviews,
-    description,
-    details,
-    id
-}) => {
+const CamperCard = ({ camperId }) => {
+    const oneCamper = useSelector(selectCampers).find(
+        camper => camper._id === camperId
+    );
+    const favoritesIds = useSelector(selectFavoritesIds);
+    const { name, price, rating, details, reviews, gallery, description } =
+        oneCamper;
+
+    const dispatch = useDispatch();
+    const addToFavorites = () => {
+        dispatch(changeFavorites(oneCamper));
+    };
+
     const equipment = Object.entries(details);
 
+    const [isOpen, setIsOpen] = useState(false);
     const [currentFirstElement, setCurrentFirst] = useState(0);
     const [currentEndElement, setCurrentEndElement] = useState(6);
+
+    const toggleOpen = () => {
+        setIsOpen(!isOpen)
+    }
 
     const toggleLeft = () => {
         if (currentEndElement <= equipment.length) {
@@ -28,7 +41,6 @@ const CamperCard = ({
             setCurrentEndElement(currentEndElement + 6);
         }
     };
-
     const toggleRight = () => {
         if (currentEndElement > 6) {
             setCurrentFirst(currentFirstElement - 6);
@@ -41,21 +53,29 @@ const CamperCard = ({
     return (
         <>
             <div className={css.card}>
-                <img src={img} alt="Camper" className={css['card-img']} />
+                <img
+                    src={gallery[0]}
+                    alt="Camper"
+                    className={css['card-img']}
+                />
                 <div className={css['card-information']}>
                     <div className={css['card-header']}>
-                        <h2 className={css['card-title']}>{title}</h2>
+                        <h2 className={css['card-title']}>{name}</h2>
                         <span className={css['card-price']}>
                             &#8364;{price}
                         </span>
                         <button
+                            onClick={addToFavorites}
                             type="button"
                             className={css['card-favorite-btn']}
                         >
                             <svg
                                 width="24"
                                 height="24"
-                                className={css['card-icon-heart']}
+                                className={favoritesIds.includes(camperId)
+                                    ? css['card-icon-heart-active']
+                                    : css['card-icon-heart']
+                                }
                             >
                                 <use href={`${icons}#icon-heart`}></use>
                             </svg>
@@ -69,7 +89,7 @@ const CamperCard = ({
                         >
                             <use href={`${icons}#icon-star`}></use>
                         </svg>
-                        {rating}({reviews} Reviews)
+                        {rating}({reviews.length} Reviews)
                     </span>
                     <span className={css['card-location']}>
                         <svg
@@ -126,10 +146,19 @@ const CamperCard = ({
                             </button>
                         </div>
                     </div>
-                    <LinkButton path={`${id}/features`} title={'Show more'} />
+                    <Button
+                        onClick={toggleOpen}
+                        title={'Show more'}
+                    />
                 </div>
             </div>
             <Outlet />
+            {isOpen &&
+                <ModalWindow
+                    onClose={toggleOpen}
+                    camperId={camperId}
+                />
+            }
         </>
     );
 };

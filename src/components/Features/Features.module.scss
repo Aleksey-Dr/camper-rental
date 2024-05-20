@@ -25,13 +25,17 @@
         margin-top: 44px;
 
         &-title {
+            margin-bottom: 24px;
+
             font-weight: 600;
             font-size: 20px;
             line-height: 1.2;
         }
 
         &-list {
-            margin-top: 48px;
+            padding-top: 24px;
+
+            border-top: solid 1px rgba(16, 24, 40, 0.1)
         }
 
         &-item {
@@ -43,7 +47,7 @@
             font-size: 18px;
             line-height: 1.33;
 
-            &:not(first-child) {
+            &:not(:first-child) {
                 margin-top: 14px;
             }
         }
@@ -55,7 +59,7 @@
 
     &-form {
         box-sizing: border-box;
-        width: 438px;
+        width: 448px;
         height: 530px;
 
         padding: 24px;
