@@ -56,8 +56,8 @@ ___
 
 ## <img src="https://img.shields.io/badge/Застосовані технології-A9225C?style=for-the-badge"/>
 
-[![Technologies](https://skillicons.dev/icons?i=html,css,js,react,nodejs)](https://skillicons.dev)
-[![Tools](https://skillicons.dev/icons?i=github,git,vscode,figma,sass)](https://skillicons.dev)
+[![Technologies](https://skillicons.dev/icons?i=html,css,sass,js,react,nodejs)](https://skillicons.dev)
+[![Tools](https://skillicons.dev/icons?i=github,githubactions,git,vscode,npm,figma)](https://skillicons.dev)
 
 ## Create React App
 
