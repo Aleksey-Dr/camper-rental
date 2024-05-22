@@ -27,6 +27,7 @@ const MainContent = () => {
 
     const filter = useSelector(selectSubmit).join(' ');
     const campers = useSelector(selectCampers);
+    localStorage.setItem('campers', JSON.stringify(campers));
     const { isLoading, error } = useSelector(selectInitial);
     const normalizedFilter = filter.toLowerCase();
     const filterCampers = campers.filter(camper => 

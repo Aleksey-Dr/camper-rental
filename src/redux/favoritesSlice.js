@@ -3,8 +3,8 @@ import { createSlice } from '@reduxjs/toolkit';
 const favoritesSlice = createSlice({
     name: 'favorites',
     initialState: {
-        favorites: [],
-        favoritesIds: [],
+        favorites: JSON.parse(localStorage.getItem('favorites')) || [],
+        favoritesIds: JSON.parse(localStorage.getItem('favoritesIds')) || [],
     },
     reducers: {
         changeFavorites(state, action) {
@@ -20,6 +20,8 @@ const favoritesSlice = createSlice({
                 state.favorites.push(action.payload);
                 state.favoritesIds.push(action.payload._id);
             }
+            localStorage.setItem('favorites', JSON.stringify(state.favorites));
+            localStorage.setItem('favoritesIds', JSON.stringify(state.favoritesIds));
         },
     },
 });

@@ -14,7 +14,7 @@ const handleRejected = (state, action) => {
 const campersSlice = createSlice({
     name: 'campers',
     initialState: {
-        campers: [],
+        campers: JSON.parse(localStorage.getItem('campers')) || [],
         isLoading: false,
         error: null,
     },
