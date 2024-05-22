@@ -1,3 +1,5 @@
+import ReactDOM from 'react-dom';
+
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
 
@@ -9,6 +11,8 @@ import { selectCampers } from '../../redux/selectors';
 import icons from 'images/icons.svg';
 
 import css from './ModalWindow.module.scss';
+
+const portal = document.getElementById('modal_window');
 
 const ModalWindow = ({ camperId, onClose }) => {
     const [featurePage, setFeaturePage] = useState(true);
@@ -34,7 +38,7 @@ const ModalWindow = ({ camperId, onClose }) => {
         setReviewsPage(true)
     };
 
-    return (
+    return ReactDOM.createPortal(
         <div
             className={css['modal-backdrop']}
         >
@@ -135,7 +139,8 @@ const ModalWindow = ({ camperId, onClose }) => {
                     }
                 </div>
             </div>
-        </div>
+        </div>,
+        portal
     );
 };
 
