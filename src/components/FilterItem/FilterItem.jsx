@@ -25,7 +25,7 @@ const FilterItem = ({ width, height, name, value, href, description }) => {
             />
             <label htmlFor={description} className={css['item-label']}>
                 <span className={css['item-wrapper']}>
-                    <svg width={width} height={height} className={css['item-icon']}>
+                    <svg width={width} height={height}>
                         <use href={href}></use>
                     </svg>
                     <div>{description}</div>
