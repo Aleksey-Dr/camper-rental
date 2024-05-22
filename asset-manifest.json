@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/camper-rental/static/css/main.e8845f93.css",
-    "main.js": "/camper-rental/static/js/main.2f61eb72.js",
+    "main.js": "/camper-rental/static/js/main.b63cce2d.js",
     "static/css/960.2b14abaf.chunk.css": "/camper-rental/static/css/960.2b14abaf.chunk.css",
     "static/js/960.adaf18f3.chunk.js": "/camper-rental/static/js/960.adaf18f3.chunk.js",
     "static/css/700.a7b6c922.chunk.css": "/camper-rental/static/css/700.a7b6c922.chunk.css",
-    "static/js/700.01a9c9ef.chunk.js": "/camper-rental/static/js/700.01a9c9ef.chunk.js",
+    "static/js/700.6f523701.chunk.js": "/camper-rental/static/js/700.6f523701.chunk.js",
     "static/css/629.b892dcb1.chunk.css": "/camper-rental/static/css/629.b892dcb1.chunk.css",
     "static/js/629.e9e94e5e.chunk.js": "/camper-rental/static/js/629.e9e94e5e.chunk.js",
     "static/js/453.576f14ef.chunk.js": "/camper-rental/static/js/453.576f14ef.chunk.js",
@@ -23,11 +23,11 @@
     "static/media/logo.webp": "/camper-rental/static/media/logo.5fa42bfcb111d3e1d97f.webp",
     "index.html": "/camper-rental/index.html",
     "main.e8845f93.css.map": "/camper-rental/static/css/main.e8845f93.css.map",
-    "main.2f61eb72.js.map": "/camper-rental/static/js/main.2f61eb72.js.map",
+    "main.b63cce2d.js.map": "/camper-rental/static/js/main.b63cce2d.js.map",
     "960.2b14abaf.chunk.css.map": "/camper-rental/static/css/960.2b14abaf.chunk.css.map",
     "960.adaf18f3.chunk.js.map": "/camper-rental/static/js/960.adaf18f3.chunk.js.map",
     "700.a7b6c922.chunk.css.map": "/camper-rental/static/css/700.a7b6c922.chunk.css.map",
-    "700.01a9c9ef.chunk.js.map": "/camper-rental/static/js/700.01a9c9ef.chunk.js.map",
+    "700.6f523701.chunk.js.map": "/camper-rental/static/js/700.6f523701.chunk.js.map",
     "629.b892dcb1.chunk.css.map": "/camper-rental/static/css/629.b892dcb1.chunk.css.map",
     "629.e9e94e5e.chunk.js.map": "/camper-rental/static/js/629.e9e94e5e.chunk.js.map",
     "453.576f14ef.chunk.js.map": "/camper-rental/static/js/453.576f14ef.chunk.js.map",
@@ -38,6 +38,6 @@
   },
   "entrypoints": [
     "static/css/main.e8845f93.css",
-    "static/js/main.2f61eb72.js"
+    "static/js/main.b63cce2d.js"
   ]
 }
